@@ -26,6 +26,6 @@ Data Management, that is _collecting_, _organising_, _cleaning_ and _storing_ da
 
 ---
 
-The schedule for this day starts with looking at how to describe data, then we look at the principles for publishing data and finally we look at how robust data models allows us to share data.
+The schedule for this day starts by looking at how to describe data, then we look at the principles for publishing data and finally we look at how robust data models allows us to share data.
 
 {% include links.md %}
