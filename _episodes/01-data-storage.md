@@ -11,8 +11,7 @@ objectives:
 - "We will explore how we can add structure to data and enrich unstructured data."
 - "We will extract metadata from pictures and video streams."
 - "We will use OpenCV to convert raw data into semi-structured data."
-- "We will Use semi-structured data to breakdown data sources."
-- "Store log files. "
+
 
 keypoints:
 - "Low level structure is critical for high level logic. Most data is unstructured and enrichment is required to extract value from that data. "
@@ -23,15 +22,17 @@ An understanding of data architecture is fundamental for data management. Data a
 In this tutorial we will look at the fundamentals of data literacy and explore how low level structure in data can enable high level logic required for data science.
 
 ## Unstructured data
-Unstructured data has been estimated to make up over 70% of data in organisations and constitutes multimedia files and many forms of files containin free-text, such as emails, pdfs and system logs. Unstructured data is also often available in extremely large volumes, Figure 1 shows some stats from a day of Web data, and rich in information which is only intelligible to humans and often unintelligible to a computer. An example of this is the over 68,417,546 images with no minimal annotations that are uploaded to instagram every day. This combination of high volume and low annotation makes it very difficult to extract value from the data. Our ability to navigate these data depends on structured annotations which provide a mechanism for reasoning. In this practical we're going to look at unstructured data and begin to impose structure on rich data streams that will enable us to navigate and dissect data so it can be used in analytics. We'll start by looking at image files.
+Unstructured data has been estimated to make up over 70% of data in organisations and constitutes multimedia files and many forms of files containing free-text, such as emails, pdfs and system logs. Unstructured data is also often available in extremely large volumes, Figure 1 shows some stats from a day of Web data, and rich in information which is only intelligible to humans and often unintelligible to a computer. An example of this is the over 68,417,546 images that are uploaded to instagram every day with minimal or no annotations. This combination of high volume and low annotation makes it very difficult to extract value from the data. A computers ability to navigate these data and ask questions of the data depends on structured annotations which provide a mechanism for reasoning. In this practical we're going to look at unstructured data and begin to impose structure on rich data streams that will enable us to navigate and dissect data so it can be used in analytics. We'll start by looking at image files.
 
 ---
 <img src="../assets/img/one-second-data.png" style="width:60%;display:block;margin-left:auto;margin-right:auto;" /> <br />
-Figure 1. A [Live internet stats](http://www.internetlivestats.com/) snapshot from 12th September. <br />
+Figure 1. A [Live internet stats](http://www.internetlivestats.com/) snapshot from 12th September 2018. <br />
 
 ---
 
 # Annotating image files
+
+Processing image files is a common challenge although in principle it represents a common design pattern for data science in the annotation pipeline. The idea of taking data, in this instance an image, processing it to extract some data, such as the presence and position of an object, and passing that on to a secondary function, such as a clustering algorithm. It is the standards for defining the annotations that enable pipeline analyses to work together. These multi-stage analyses are also important for accountability as intermediary data can be used for tracing decisions and identifying causality of model training. An example may be that
 
 Image files despite being considered as unstructured data have strict file format encoding. This encoding structure enables applications to understand the lower level binary by using the the structure to navigate chunks of data and only process the relevant parts. Abstraction is only possible if standards defined and followed. The file format encoding was defined in an open data standard, in this instance [RFC 2083](https://tools.ietf.org/html/rfc2083). RFC2083 was initially published in 1997 as an informational, a less well recognised standard, and later published as [ISO/IEC 15948](https://www.iso.org/standard/29581.html).
 

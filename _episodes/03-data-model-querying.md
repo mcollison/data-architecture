@@ -1,5 +1,5 @@
 ---
-title: "Data schema design"
+title: "Data model querying"
 teaching: 0
 exercises: 0
 questions:
