@@ -26,7 +26,7 @@ In this tutorial we will look at the fundamentals of data literacy and explore h
 Unstructured data has been estimated to make up over 70% of data in organisations and constitutes multimedia files and many forms of files containin free-text, such as emails, pdfs and system logs. Unstructured data is also often available in extremely large volumes, Figure 1 shows some stats from a day of Web data, and rich in information which is only intelligible to humans and often unintelligible to a computer. An example of this is the over 68,417,546 images with no minimal annotations that are uploaded to instagram every day. This combination of high volume and low annotation makes it very difficult to extract value from the data. Our ability to navigate these data depends on structured annotations which provide a mechanism for reasoning. In this practical we're going to look at unstructured data and begin to impose structure on rich data streams that will enable us to navigate and dissect data so it can be used in analytics. We'll start by looking at image files.
 
 ---
-![Internet data](../assets/img/one-second-data.png) <br />
+<img src="../assets/img/one-second-data.png" style="width:60%;display:block;margin-left:auto;margin-right:auto;" /> <br />
 Figure 1. A [Live internet stats](http://www.internetlivestats.com/) snapshot from 12th September. <br />
 
 ---
@@ -60,7 +60,11 @@ python3 image-test-1.py
 
 If you have followed the instructions to the letter the result will be a glorious _None_ because *pic1.jpg* does not existing in the current directory. Move an image into the current directory, correct the filepath in the code and try again. Unsplash, [https://unsplash.com/], have a collection of great pictures that are free to use and redistribute. If you choose the following image the output is shown below. Notice the print statement provides an array of integer in the range 0-255 which is the additive primary colours that make up the raw data of the image pixels.
 
-![Link to cycling image](https://images.unsplash.com/photo-1494488802316-82250d81cfcc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=776ce711096a91e41ac905d3556361e3&auto=format&fit=crop&w=1950&q=80 =50%)
+---
+<img src="https://images.unsplash.com/photo-1494488802316-82250d81cfcc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=776ce711096a91e41ac905d3556361e3&auto=format&fit=crop&w=1950&q=80" style="width:50%;display:block;margin-left:auto;margin-right:auto;" /> <br />
+Figure 2. Arbitrary [image of cycling](https://images.unsplash.com/photo-1494488802316-82250d81cfcc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=776ce711096a91e41ac905d3556361e3&auto=format&fit=crop&w=1950&q=80) from [Unsplash](https://images.unsplash.com). <br />
+
+---
 
 [[106 107 108 ...  53  58  56] <br />
  [106 107 106 ...  49  57  55] <br />
