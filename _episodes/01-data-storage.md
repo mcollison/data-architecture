@@ -60,7 +60,7 @@ python3 image-test-1.py
 
 If you have followed the instructions to the letter the result will be a glorious _None_ because *pic1.jpg* does not existing in the current directory. Move an image into the current directory, correct the filepath in the code and try again. Unsplash, [https://unsplash.com/], have a collection of great pictures that are free to use and redistribute. If you choose the following image the output is shown below. Notice the print statement provides an array of integer in the range 0-255 which is the additive primary colours that make up the raw data of the image pixels.
 
-![Link to cycling image](https://images.unsplash.com/photo-1494488802316-82250d81cfcc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=776ce711096a91e41ac905d3556361e3&auto=format&fit=crop&w=1950&q=80)
+![Link to cycling image](https://images.unsplash.com/photo-1494488802316-82250d81cfcc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=776ce711096a91e41ac905d3556361e3&auto=format&fit=crop&w=1950&q=80 =50%)
 
 [[106 107 108 ...  53  58  56] <br />
  [106 107 106 ...  49  57  55] <br />
