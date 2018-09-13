@@ -32,13 +32,17 @@ Figure 1. A [Live internet stats](http://www.internetlivestats.com/) snapshot fr
 
 # Annotating image files
 
-Processing image files is a common challenge although in principle it represents a common design pattern for data science in the annotation pipeline. The idea of taking data, in this instance an image, processing it to extract some data, such as the presence and position of an object, and passing that on to a secondary function, such as a clustering algorithm. It is the standards for defining the annotations that enable pipeline analyses to work together. These multi-stage analyses are also important for accountability as intermediary data can be used for tracing decisions and identifying causality of model training. An example may be that
+Processing image files to extract information from the unstructured data is a common challenge in computer vision although also in principle represents an annotation pipeline which is a common design pattern for data science. An annotation pipeline is the idea of taking data, in this instance an image, processing it to extract some derivative data, such as the presence and position of an object, and embedding that derivative data so it is available for downstream processing by a secondary function, such as a clustering algorithm. The standards for defining the annotations that enable pipeline analyses to work together provide rigour to this process and conforming to standards enables pipelines to be reproducible. Standards and annotations in these multi-stage analyses are also important for accountability as intermediary data can be used for tracing decisions and identifying causality of model training. For further reading see, The Internet of Things and Edge Computing, which are areas of research that specialise in this processing raw data and annotations, and decoupling processing and pipelines.
 
-Image files despite being considered as unstructured data have strict file format encoding. This encoding structure enables applications to understand the lower level binary by using the the structure to navigate chunks of data and only process the relevant parts. Abstraction is only possible if standards defined and followed. The file format encoding was defined in an open data standard, in this instance [RFC 2083](https://tools.ietf.org/html/rfc2083). RFC2083 was initially published in 1997 as an informational, a less well recognised standard, and later published as [ISO/IEC 15948](https://www.iso.org/standard/29581.html).
+Image files despite being considered as unstructured data have strict file format encoding. This encoding structure enables applications to understand the lower level binary by using the the structure to navigate chunks of data and process and reconstruct the relevant parts. Abstraction is only possible if standards are defined and followed. The Portable Network Graphics (PNG) file format encoding was defined in an open data standard, in this instance [RFC 2083](https://tools.ietf.org/html/rfc2083). RFC2083 was initially published in 1997 as an informational, a less well recognised standard, and later published as [ISO/IEC 15948](https://www.iso.org/standard/29581.html).
 
 ## Installing OpenCV
 
-The installation process for OpenCV (if it works) is simple. Enter the command below, you should get a couple of downloads and
+OpenCV stands for Open Source Computer Vision is an image processing library supported by Intel released under the open source BSD license. The core software is a mature with extensive functionality and documentation. Here, we are going to use the python binding to implement a select part of the functionality for object detection in an annotation pipeline. For more details see the [official documentation](https://docs.opencv.org/) and for further tutorials in python particularly on feature extraction in image processing see the [official python tutorials](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html).  
+
+The installation process for OpenCV with python includes two parts; installing the core OpenCV software on the host machine and installing the python package that provides a binding to the core software. If you are developing in Linux, you should be able to install the software and python package from the command-line with aptitude and pip package managers respectively.
+
+`sudo apt-get install python-opencv`
 
 `pip3 install opencv-python`
 
@@ -59,7 +63,7 @@ You should then move to the command-line and execute the script as below.
 python3 image-test-1.py
 ```
 
-If you have followed the instructions to the letter the result will be a glorious _None_ because *pic1.jpg* does not existing in the current directory. Move an image into the current directory, correct the filepath in the code and try again. Unsplash, [https://unsplash.com/], have a collection of great pictures that are free to use and redistribute. If you choose the following image the output is shown below. Notice the print statement provides an array of integer in the range 0-255 which is the additive primary colours that make up the raw data of the image pixels.
+If you have followed the instructions to the letter the result will be a glorious _None_ because *pic1.jpg* does not existing in the current directory. Move an image into the current directory, correct the filepath in the code and try again. Unsplash, <https://unsplash.com/>, has a collection of great pictures that are free to use and redistribute. If you choose the following image the output is shown below. Notice the print statement provides an array of integer in the range 0-255 which is the additive primary colours that make up the raw data of the image pixels.
 
 ---
 <img src="https://images.unsplash.com/photo-1494488802316-82250d81cfcc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=776ce711096a91e41ac905d3556361e3&auto=format&fit=crop&w=1950&q=80" style="width:50%;display:block;margin-left:auto;margin-right:auto;" /> <br />
@@ -75,7 +79,7 @@ Figure 2. Arbitrary [image of cycling](https://images.unsplash.com/photo-1494488
  [138 140 138 ... 116 117 117] <br />
  [141 146 143 ... 115 115 115]] <br />
 
-Note this pixel data is data in a form the computer can understand but if we want to present it to humans we need to run a program to convert the numeric bytes into an image. Add the following lines of code to the bottom of your script and the image should appear.
+Note this pixel data is data in the form that the computer sees. This is what 'data' looks at the second level of abstraction and if we want to present it to humans we need to run a program that uses a standard to convert the numeric bytes into an image. Add the following lines of code to the bottom of your script and the image should appear.
 
 ```python
 # prepare GUI
