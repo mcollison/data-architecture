@@ -33,7 +33,7 @@ Figure 1. A [Live internet stats](http://www.internetlivestats.com/) snapshot fr
 
 # Annotating image files
 
-Image files despite being considered as unstructured data have strict file format encoding. This encoding structure enables applications to understand the lower level binary by using the the structure to navigate chunks of data and only process the relevant parts. Abstraction is only possible if standards defined and followed. The file format encoding was defined in an open data standard, in this instance [RFC 2083](https://tools.ietf.org/html/rfc2083). RFC2083 was initially published in 1997 as an informational, a less well recognised standard, and later published as [ISO/IEC 15948](https://www.iso.org/standard/29581.html). 
+Image files despite being considered as unstructured data have strict file format encoding. This encoding structure enables applications to understand the lower level binary by using the the structure to navigate chunks of data and only process the relevant parts. Abstraction is only possible if standards defined and followed. The file format encoding was defined in an open data standard, in this instance [RFC 2083](https://tools.ietf.org/html/rfc2083). RFC2083 was initially published in 1997 as an informational, a less well recognised standard, and later published as [ISO/IEC 15948](https://www.iso.org/standard/29581.html).
 
 ## Installing OpenCV
 
@@ -167,10 +167,6 @@ xmpfile = XMPFiles( file_path="test/samples/BlueSquare.xmp" )
 ```
 
 Now we have a well annotated image file. Ideal for archiving because we can find them. Look at a comparison to a log file.
-
-
-# Web scraping
-Web scraping
 
 
 # Video Processing
