@@ -99,7 +99,7 @@ cv2.imwrite('pic1-grey.png',img)
 
 Note if you go back and print the image it will display the same pixel data. However, if you look at the metadata for the file it specifies that the image is encoded with the 'color space: Gray'.  
 
-![gray scale file properties](./grayscale-file-properties.png)
+![gray scale file properties](../assets/img/grayscale-file-properties.png)
 
 So far we've seen the basis of file encoding and seen how metadata in the file header can affect the image. Next we're going to look at structure in files.
 

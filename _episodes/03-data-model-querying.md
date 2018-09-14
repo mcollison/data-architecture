@@ -14,6 +14,8 @@ keypoints:
 - "Databases provide a way to navigate through and modify data efficiently for live deployment. "
 ---
 
+https://upload.wikimedia.org/wikipedia/commons/7/77/Lod_2017-02-20.png
+
 pip install goenrich
 
 ```python
